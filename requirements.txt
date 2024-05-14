@@ -1,0 +1,14 @@
+torch
+torchvision
+torchsummary
+scikit-learn    
+pyyaml        
+numpy      
+tqdm      
+pandas      
+matplotlib
+jupyter
+ipykernel
+ruamel.yaml
+seaborn
+librosa

@@ -1,0 +1,107 @@
+default: &DEFAULT
+  num_epochs: 1000
+  batch_size: 256
+
+MLP:
+  <<: *DEFAULT
+  model_name: mlp
+  data_dir: "Data" # https://www.kaggle.com/zalando-research/fashionmnist
+  checkpoint_dir: "checkpoints/mlp"
+  log_dir: 'logs/mlp'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 256
+  lr: 0.0001
+
+CNN:
+  <<: *DEFAULT
+  model_name: cnn
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/cnn"
+  log_dir: 'logs/cnn'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 16
+  lr: 0.0001
+
+VGG16:
+  <<: *DEFAULT
+  model_name: VGG16
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/vgg16"
+  log_dir: 'logs/vgg16'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 32
+  lr: 0.0001
+
+RESNET50:
+  <<: *DEFAULT
+  model_name: resnet50
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/resnet50"
+  log_dir: 'logs/resnet50'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 32
+  lr: 0.0001
+
+RESNET50_hist:
+  <<: *DEFAULT
+  model_name: resnet50_hist
+  data_dir: "lung_colon_image_set"
+  checkpoint_dir: "checkpoints/resnet50_hist"
+  log_dir: 'logs/resnet50_hist'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 32
+  lr: 0.0001
+
+RESNET_Pretrained:
+  <<: *DEFAULT
+  model_name: resnet_pretrained
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/resnet-pretrained"
+  log_dir: 'logs/resnet-pretrained'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 32
+  lr: 0.0001
+
+MyModel:
+  <<: *DEFAULT
+  model_name: myModel
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/myModel"
+  log_dir: 'logs/myModel'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 16
+  lr: 0.0001
+
+LSTM:
+  <<: *DEFAULT
+  model_name: LSTM
+  data_dir: "Data"
+  checkpoint_dir: "checkpoints/LSTM"
+  log_dir: 'logs/LSTM'
+  dataset_class: "MusicImageDataset"
+  flatten: False
+  gpu_vis_dev: '0'
+  num_epochs: 10
+  batch_size: 16
+  lr: 0.0001
